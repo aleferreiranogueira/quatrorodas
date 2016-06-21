@@ -1,0 +1,232 @@
+/*
+Theme Name: Quatro Rodas
+Theme URI: http://localhost/wordpress/wp-content/themes/quatrorodas
+Description: Template de teste para a Editora Abril
+Author: Alexandre Nogueira
+Template: quatrorodas
+Version: 1.0
+Author URI: https://github.com/aleferreiranogueira
+*/
+@import 'https://fonts.googleapis.com/css?family=Libre+Franklin:700';
+body{
+	background-color: #e6e6e6;
+}
+/* 1.0 - Header */
+header{
+	margin-bottom: 5px;
+}
+/* 1.1 - Menu Header*/
+.menu-header{
+	background-color: red;
+	padding: 20px 20px 15px 20px;
+	font: 700 14px "Dosis",Sans-serif;
+}
+/*Alinha verticalmente com o logo*/
+#nav-header{
+	padding-top: 5px;
+	float: right;
+}
+#search{
+	width:150px;
+	height:30px; 
+}
+
+/* Tira o estilo padrão da lista*/
+ul {
+ list-style-type: none;
+ list-style: none;
+ margin:0;
+ padding-left:0;
+ overflow: hidden;
+}
+
+/* Deixa o menu na horizontal */
+header li {
+	float: left;
+}
+a{
+	text-decoration: inherit;
+	color: inherit;
+}
+
+/* Faz com que a área inteira do menu seja "clicável"*/
+header li a{	
+	color: white;
+    text-transform: uppercase;
+    display: block;
+    padding: 5px; 
+}
+
+header li:hover{
+	background-color: black;
+	text-decoration: none;
+}
+/* 1.1 Sub Menu Header*/
+.submenu-header{
+	background-color: black;
+}
+#menu-submenu-header{
+	font: 700 11px "Dosis",Sans-serif;
+}
+#menu-submenu-header > li{
+	padding-left: 8px;
+}
+#menu-submenu-header > li:first-child{
+	background-color: #ed1c24;
+}
+
+/* Destaques */
+#destaques li:first-child{
+	margin-left: -20px;
+}
+
+#destaques h3, h4{
+	font-family: 'Libre Franklin', sans-serif;
+	z-index: 3;
+	position: absolute;
+	text-transform: uppercase;
+    direction: rtl;
+    text-align: right;
+    float: right;
+    color: #fff;
+}
+
+#destaques h4{
+    padding: 0 20px;
+    bottom: 0;
+    color: #fff;
+}
+
+#destaques h3::before{
+	top: 15px;
+    right: 35px;
+}
+/* Títulos Destaques*/
+.tag-box{
+	font-size: 14px;
+	left: 250px;
+    bottom:50px;
+}
+.tag-box-destaque{
+	font-size: 16px;
+	left: 500px;
+    bottom:35px;	
+}
+.title-destaque{
+	font-size: 16px;
+}
+.title-subdestaque{
+	font-size: 14px;
+}
+
+/* SubDestaques*/
+#subdestaque{
+	padding-top:25px;
+	padding-bottom: 50px;
+}
+#subdestaque:first-child{
+	margin-left: -15px;
+}
+
+/*Títulos Subdestaques*/
+#subdestaque h3, h4{
+	color: black;
+}
+#subdestaque h3{
+	font-family: 'Libre Franklin', sans-serif;
+	z-index: 3;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: -5px;
+	left: 38px;
+	color: #fff;
+}
+h3::before{
+	content: "";
+    display: block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    background-color: #ed1c24;
+    border-radius: 2px;
+}
+
+#subdestaque h3::before{
+    top: 15px;
+    right: 15px;
+}
+/* CSS Referente a mobile */
+.menu-mobile{
+	display: none;
+}
+
+@media screen and (max-width: 480px){
+	.ad-header{
+		display: none;
+	}
+	#destaques h3,h4{
+		right:190px;
+		direction: ltr;
+    	text-align: left;
+	}
+	.destaque-principal img{
+		width: 293px;
+		height:222px;
+	}
+	#nav-header{
+		display: none;
+	}
+	.submenu-header{
+		display: none;
+	}
+	.searchDiv{
+		display: none;
+	}
+	.title-destaque{
+		font-size: 14px;
+	}
+	.title-subdestaque{
+		font-size: 12px;
+	}
+	#subdestaque h4{	
+		position: static;
+	}
+	#subdestaque h3{
+		bottom:55px;
+	}
+	.tag-box-destaque{
+		left: 245px;
+		bottom: -2px;
+	}
+
+	#nav-header{
+		padding-top: 5px;
+		float: none;
+	}
+	.menu-mobile{
+		display: block;
+	}
+	.menu-header{
+		padding: 5px 5px 5px 5px;
+	}
+	header li{
+		float: none;
+	}
+	li::after{
+		content: "";
+	    position: absolute;
+	    width: 100%;
+	    height: 1px;
+	    background-color: #e6e6e6;
+	    border-radius: 2px;
+	}
+	#icon-menu{
+		position: relative;
+		top: -25px;
+		left: 285px;
+		font-size: 20px;
+	}
+	.div-header{
+		color: #BF191F;
+	}
+}
